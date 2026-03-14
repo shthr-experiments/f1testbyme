@@ -6,12 +6,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>F1 - Test Site</title>
 
 <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
 <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 
-<title>F1</title>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -20,12 +20,11 @@
 <div class="container">
 
 <div class="stream-box">
+
 <div class="label">Stream 1</div>
 
 <iframe 
-class="stream"
 src="https://pooembed.eu/embed/f1/2026/china/sprint"
-frameborder="0"
 allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
 allowfullscreen>
 </iframe>
@@ -33,16 +32,20 @@ allowfullscreen>
 </div>
 
 <div class="stream-box">
+
 <div class="label">Stream 2</div>
+
+<div class="player-wrapper">
 
 <video
 id="f1player"
-class="video-js vjs-big-play-centered stream"
+class="video-js vjs-big-play-centered"
 controls
 autoplay
 preload="auto">
 
-<source src="https://hakunamatata5.org:8088/hls/sky-f1.m3u8"
+<source 
+src="https://hakunamatata5.org:8088/hls/sky-f1.m3u8"
 type="application/x-mpegURL">
 
 </video>
@@ -51,9 +54,11 @@ type="application/x-mpegURL">
 
 </div>
 
+</div>
+
 <script>
 
-var player = videojs('f1player',{
+videojs('f1player',{
 fluid:true,
 liveui:true
 });
@@ -61,5 +66,4 @@ liveui:true
 </script>
 
 </body>
-
 </html>
